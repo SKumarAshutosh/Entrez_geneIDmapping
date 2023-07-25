@@ -21,8 +21,6 @@ Select important columns and drop the remaining features
 
 Fig 2: Select specific columns
 
-
-
 exploteded the synonyms in column wise
 
 
