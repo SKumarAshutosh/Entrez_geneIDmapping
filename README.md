@@ -11,10 +11,11 @@ In the Homo_sapiens.gene_info.gz" we have mutliple features, but as per the per 
 ![Example Image](images/Homo_sapiens_Data.png)
     Fig 1: Original Data
 
+Select important columns and drop the remaining features
 ![Example Image](images/Main_Column.png)
     Fig 2: Select specific columns
 
-
+exploteded the synonyms in column wise
 ![Example Image](images/Exploded_column.png)
     Fig 3: Explode the columns
 
@@ -37,3 +38,5 @@ The  main requiremnt of the task is to convert Gene Symbols with the associateID
 
 ![Example Image](images/gmt_fileafterDecoding.png)
     Fig 5: Mapping output
+    
+## 4. Finaly the data is stored in gmt file name "mapping.gmt"
