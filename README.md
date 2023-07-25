@@ -9,14 +9,14 @@ This task is about to mapping of gene name to the associated geneID to h.all.v20
 In the Homo_sapiens.gene_info.gz" we have mutliple features, but as per the per the requiremant of the task take 'GeneID', 'Symbol', 'Synonyms' were considered. for mapping. As 'Synonyms' having multiple values  seperated by '|' "Pipe" so explode the data make the 'Synonyms' of the same'Symbol' kept togeher. 
 
 ![Example Image](images/Homo_sapiens_Data.png)
-Original Data
+    Fig 1: Original Data
 
 ![Example Image](images/Main_Column.png)
-Select specific columns
+    Fig 2: Select specific columns
 
 
 ![Example Image](images/Exploded_column.png)
-Explode the columns
+    Fig 3: Explode the columns
 
 
 
@@ -25,7 +25,7 @@ Explode the columns
 Read the "h.all.v2023.1.Hs.symbols.gmt" file, that contains Gene Set, Description and Genes.
 
 ![Example Image](images/gmt_file.png)
-Read GMT file
+    Fig 4: Read GMT file
 
 
 
@@ -36,4 +36,4 @@ The  main requiremnt of the task is to convert Gene Symbols with the associateID
 
 
 ![Example Image](images/gmt_fileafterDecoding.png)
-Mapping output
+    Fig 5: Mapping output
