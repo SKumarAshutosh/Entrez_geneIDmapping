@@ -15,7 +15,7 @@ Original Data
 Select specific columns
 
 
-![Example Image](images/Exploded Column.png)
+![Example Image](images/Exploded_column.png)
 Explode the columns
 
 
