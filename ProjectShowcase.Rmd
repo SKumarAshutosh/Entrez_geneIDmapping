@@ -33,8 +33,8 @@ library(readr)
 # Required package
 
 
-# Define the file path
-file_path <- "D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\Homo_sapiens.gene_info.gz"
+# Define the relative file path
+file_path <- "./Homo_sapiens.gene_info.gz"
 # Read the gzipped .csv file into a DataFrame
 data <- read_tsv(gzfile(file_path))
 # Print the first few rows
@@ -132,7 +132,7 @@ print_all_gene_sets <- function(gene_sets) {
 }
 
 # Use the function
-file_path <- "D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\h.all.v2023.1.Hs.symbols.gmt"
+file_path <- "./h.all.v2023.1.Hs.symbols.gmt"
 gene_sets <- read_gmt(file_path)
 
 # Check if there are any gene sets
@@ -224,7 +224,7 @@ write_gmt <- function(gene_sets, file_name) {
 }
 
 # Use the function
-gene_sets <- read_gmt("D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\h.all.v2023.1.Hs.symbols.gmt", symbol_to_id, synonyms_to_id)
+gene_sets <- read_gmt("./h.all.v2023.1.Hs.symbols.gmt", symbol_to_id, synonyms_to_id)
 
 # Print all gene sets
 print_all_gene_sets(gene_sets)

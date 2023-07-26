@@ -49,7 +49,7 @@ print_all_gene_sets <- function(gene_sets) {
 }
 
 # Use the function
-file_path <- "D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\h.all.v2023.1.Hs.symbols.gmt"
+file_path <- "./h.all.v2023.1.Hs.symbols.gmt"
 gene_sets <- read_gmt(file_path)
 
 # Check if there are any gene sets

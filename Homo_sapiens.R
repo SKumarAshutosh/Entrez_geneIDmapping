@@ -1,26 +1,8 @@
-# # Set the working directory
-# setwd("D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping")
-# 
-# # Read the .gz file
-# data <- read.table(gzfile("Homo_sapiens.gene_info.gz"), sep="\t", header=TRUE, fill=TRUE)
-# 
-# # Print the first few rows
-# head(data)
-# 
-# 
-# 
-# # Read the .gz file into a DataFrame
-# data <- read.table(gzfile("Homo_sapiens.gene_info.gz"), sep="\t", header=TRUE)
-# 
-# # Print the first few rows
-# head(data)
-
-
 # Required package
 library(readr)
 
 # Define the file path
-file_path <- "D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\Homo_sapiens.gene_info.gz"
+file_path <- "./Homo_sapiens.gene_info.gz"
 
 # Read the gzipped .csv file into a DataFrame
 data <- read_tsv(gzfile(file_path))
@@ -52,5 +34,6 @@ data2 <- data1 %>%
 # View the DataFrame
 data2
 
+write.csv(data2, file = "./gene_data.csv")
 
 

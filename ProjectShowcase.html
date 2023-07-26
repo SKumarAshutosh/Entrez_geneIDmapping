@@ -1521,8 +1521,8 @@ library(readr)</code></pre>
 <pre class="r"><code># Required package
 
 
-# Define the file path
-file_path &lt;- &quot;D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\Homo_sapiens.gene_info.gz&quot;
+# Define the relative file path
+file_path &lt;- &quot;./Homo_sapiens.gene_info.gz&quot;
 # Read the gzipped .csv file into a DataFrame
 data &lt;- read_tsv(gzfile(file_path))</code></pre>
 <pre><code>## Rows: 191242 Columns: 16
@@ -1658,7 +1658,7 @@ print_all_gene_sets &lt;- function(gene_sets) {
 }
 
 # Use the function
-file_path &lt;- &quot;D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\h.all.v2023.1.Hs.symbols.gmt&quot;
+file_path &lt;- &quot;./h.all.v2023.1.Hs.symbols.gmt&quot;
 gene_sets &lt;- read_gmt(file_path)
 
 # Check if there are any gene sets
@@ -1944,7 +1944,7 @@ write_gmt &lt;- function(gene_sets, file_name) {
 }
 
 # Use the function
-gene_sets &lt;- read_gmt(&quot;D:\\R_Tutorials\\BioInformatics\\Entrez_geneIDmapping\\h.all.v2023.1.Hs.symbols.gmt&quot;, symbol_to_id, synonyms_to_id)
+gene_sets &lt;- read_gmt(&quot;./h.all.v2023.1.Hs.symbols.gmt&quot;, symbol_to_id, synonyms_to_id)
 
 # Print all gene sets
 print_all_gene_sets(gene_sets)</code></pre>
