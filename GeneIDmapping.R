@@ -100,15 +100,36 @@ print_all_gene_sets <- function(gene_sets) {
   }
 }
 
+# # Function to write the gene sets to a .gmt file
+# write_gmt <- function(gene_sets, file_name) {
+#   file_conn <- file(file_name, "w")
+#   for (gene_set in gene_sets) {
+#     lines <- c(paste("Gene Set: ", gene_set$gene_set_name), 
+#                paste("Description: ", gene_set$description), 
+#                paste("Genes: ", paste(gene_set$genes, collapse = ", ")))
+#     writeLines(lines, file_conn)
+#     writeLines("", file_conn) # add a newline after each gene set
+#   }
+#   close(file_conn)
+# }
+# 
+# # Use the function
+# gene_sets <- read_gmt("./h.all.v2023.1.Hs.symbols.gmt", symbol_to_id, synonyms_to_id)
+# 
+# # Print all gene sets
+# print_all_gene_sets(gene_sets)
+# 
+# # Write the gene sets to a .gmt file
+# write_gmt(gene_sets, "./mapping_final.gmt")
+
+
 # Function to write the gene sets to a .gmt file
 write_gmt <- function(gene_sets, file_name) {
   file_conn <- file(file_name, "w")
   for (gene_set in gene_sets) {
-    lines <- c(paste("Gene Set: ", gene_set$gene_set_name), 
-               paste("Description: ", gene_set$description), 
-               paste("Genes: ", paste(gene_set$genes, collapse = ", ")))
-    writeLines(lines, file_conn)
-    writeLines("", file_conn) # add a newline after each gene set
+    # Format a line in GMT format: gene set name, description, list of genes
+    line <- paste(c(gene_set$gene_set_name, gene_set$description, gene_set$genes), collapse = "\t")
+    writeLines(line, file_conn)
   }
   close(file_conn)
 }
@@ -116,13 +137,8 @@ write_gmt <- function(gene_sets, file_name) {
 # Use the function
 gene_sets <- read_gmt("./h.all.v2023.1.Hs.symbols.gmt", symbol_to_id, synonyms_to_id)
 
-# Print all gene sets
-print_all_gene_sets(gene_sets)
-
 # Write the gene sets to a .gmt file
-write_gmt(gene_sets, "./mapping_final.gmt")
-
-
+write_gmt(gene_sets, "./finalGMT_mapping.gmt")
 
 
 
