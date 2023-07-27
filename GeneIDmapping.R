@@ -1,5 +1,9 @@
-# Required package
+
+# Load required packages
+
 library(readr)
+library(tidyverse)
+library(stringr)
 
 # Define the file path
 file_path <- "./Homo_sapiens.gene_info.gz"
@@ -23,8 +27,6 @@ data1 <- data[, !(names(data) %in% cols_to_drop)]
 
 
 
-# Load required packages
-library(tidyverse)
 
 # Separate the 'Synonyms' column into multiple rows
 data2 <- data1 %>% 
@@ -38,8 +40,7 @@ data2
 
 
 
-library(tidyverse)
-library(stringr)
+
 
 
 
